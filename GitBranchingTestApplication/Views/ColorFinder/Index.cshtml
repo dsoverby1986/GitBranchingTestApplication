@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Color Finder";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<input type="color" id="colorFinder" class="form-control" />
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#colorFinder').on('change', function () {
+                var color = $(this).val();
+                console.log(color);
+                $('body').css('background-color', color);
+            });
+        });
+    </script>
+}
